@@ -21,7 +21,7 @@ jobs:
       - run: docker push ghcr.io/maggadalka/python-prog:1.0
       - run: docker build -t ghcr.io/maggadalka/node-prog:1.0 ./node-app
       - run: docker push ghcr.io/maggadalka/node-prog:1.0
-      - run: ssh -o "StrictHostKeyChecking no" 'maggadalka-newrepo-p96cq3omcsp#oIctO449XrB5D_SvrgFXcVtufv_Lq2L2@maggadalka-newrepo-p96cq3omcsp.ssh.ws-eu106.gitpod.io' 'cd /workspace/new-repo && docker compose pull && docker compose up -d' 
+      - run: ssh -o "StrictHostKeyChecking no" 'maggadalka-newrepo-hssyqux0x9h#KnmA6NmfPgJWetyqZ_0KA7T.qG7rutwh@maggadalka-newrepo-hssyqux0x9h.ssh.ws-eu106.gitpod.io' 'cd /workspace/new-repo && docker compose pull && docker compose up -d' 
 
   notify-success: 
     runs-on: ubuntu-latest 
