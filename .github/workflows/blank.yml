@@ -19,4 +19,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t ghcr.io/maggadalka/new-repo:1.0 ./python-app
       - run: docker push ghcr.io/maggadalka/new-repo:1.0
+      - run: docker build -t ghcr.io/maggadalka/new-repo:1.0 ./node-app
+      - run: docker push ghcr.io/maggadalka/new-repo:1.0
       - run: ssh -o "StrictHostKeyChecking no" 'maggadalka-newrepo-hssyqux0x9h#CXlpaZjsB9oKMnfOPRs-h5bZsB9JEozm@maggadalka-newrepo-hssyqux0x9h.ssh.ws-eu106.gitpod.io' 'cd /workspace/new-repo && docker compose pull && docker compose up -d' 
