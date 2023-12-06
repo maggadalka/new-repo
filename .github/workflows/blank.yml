@@ -17,7 +17,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker build -t ghcr.io/maggadalka/new-repo:1.0 ./python-app
+      - run: docker build -t ghcr.io/maggadalka/new-repo:1.0 .
       - run: docker push ghcr.io/maggadalka/new-repo:1.0 
   deploy:
     runs-on: ubuntu-latest
@@ -29,5 +29,5 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker run ghcr.io/maggadalka/new-repo:1.0 ./python-app
+      - run: docker run ghcr.io/maggadalka/new-repo:1.0 
       
